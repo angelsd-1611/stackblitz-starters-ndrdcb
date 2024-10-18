@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, sans-serif;
+  color: black;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+.Contenedor-de-Objetos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 100vw;
+}
+
+.Objetos {
+  border-radius: 10px;
+  background-color: white;
+  width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.Objetos:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+  transform: scale(1.05); 
+}
+
+.Objetos img {
+  transition: transform 0.3s ease; 
+}
+
+.Objetos img:hover {
+  transform: rotate(5deg); 
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+h1.logo, h1.registro {
+  animation: slideIn 1s ease-in-out; 
+}
+
+
+.Infop1, .Infop2, .Infop3, .Infop4 {
+  padding: 30px 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Infop1 button, .Infop2 button, .Infop3 button, .Infop4 button {
+  border: none;
+  background-color: #000;
+  color: white;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease; 
+}
+
+.Infop1 button:hover, .Infop2 button:hover, .Infop3 button:hover, .Infop4 button:hover {
+  background-color: #444;
+  transform: scale(1.1); 
+}
+
+.Precio {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0.5rem;
+  gap: 0.5rem;
+  border-bottom: solid 0.5px #aaa;
+  background-color: #eee;
+  position: sticky;
+  top: 0;
+}
+
+.up {
+  padding: -0rem;
+  display: flex;
+}
+
+.nav-links {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s ease-in-out; 
+}
+
+.nav-links a:hover {
+  color: #3498db;
+}
+
+nav a {
+  display: inline-block;
+  min-width: 9rem;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  text-align: center;
+  text-decoration: none;
+  color: #555;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #ddd;
+  color: #000;
+}
